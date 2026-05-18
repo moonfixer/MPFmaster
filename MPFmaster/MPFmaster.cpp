@@ -2330,7 +2330,7 @@ int cmpParseACTION(char* input_line)
 
         // apply the values
 
-        act.track = stoi(param1, nullptr, 16);
+        act.track = static_cast<int>(stoul(param1, nullptr, 16));
         act.sectionID = stoi(param2);
 
         if (act.track == 0)
